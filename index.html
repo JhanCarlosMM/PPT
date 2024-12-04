@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piedra, Papel o Tijeras</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .winner {
+      background-color: #c5e6ad !important; /* Azul */
+      color: #fff;
+    }
+    .loser {
+      background-color: #f54962b3 !important; /* Rosado */
+      color: #fff;
+    }
+  </style>
+</head>
+<body class="bg-light">
+  <div class="container text-center mt-5">
+    <h1 class="mb-4">Piedra, Papel o Tijeras</h1>
+    <p class="lead">¡Elige tu opción!</p>
+
+    <!-- Marcador -->
+    <div class="d-flex justify-content-center mb-4">
+      <div class="mx-3">
+        <h4>Jugador</h4>
+        <p id="player-score" class="display-5">0</p>
+      </div>
+      <div class="mx-3">
+        <h4>Computadora</h4>
+        <p id="computer-score" class="display-5">0</p>
+      </div>
+    </div>
+
+    <!-- Opciones de juego -->
+    <div class="d-flex justify-content-center mb-4">
+      <button class="btn btn-primary mx-2" onclick="play('piedra')">🪨 Piedra</button>
+      <button class="btn btn-success mx-2" onclick="play('papel')">📄 Papel</button>
+      <button class="btn btn-danger mx-2" onclick="play('tijeras')">✂️ Tijeras</button>
+    </div>
+
+    <!-- Resultado -->
+    <div id="result" class="alert alert-secondary" role="alert">
+      ¡Haz tu elección para comenzar el juego!
+    </div>
+
+    <!-- Botón de reinicio -->
+    <button class="btn btn-secondary mt-3" onclick="resetGame()">Reiniciar Juego</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
